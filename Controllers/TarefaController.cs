@@ -24,6 +24,7 @@ namespace TrilhaApiDesafio.Controllers
             var BuscarPorId = _context.Tarefas.Find(id);
             if(BuscarPorId == null)
                 return NotFound("Tarefa não encontrada");
+
             return Ok();
         }
 
@@ -31,6 +32,7 @@ namespace TrilhaApiDesafio.Controllers
         public IActionResult ObterTodos()
         {
             // TODO: Buscar todas as tarefas no banco utilizando o EF
+            var ObterTodasTarefas = _context.Tarefas.ToList();
             return Ok();
         }
 
